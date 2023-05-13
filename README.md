@@ -1,2 +1,0 @@
-# eyeware-genai
-NISHANT

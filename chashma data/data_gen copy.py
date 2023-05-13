@@ -1,12 +1,14 @@
 import openpyxl
 import random
 
+
 for modelnumber in range(50):
     workbook = openpyxl.Workbook()
 
     worksheet = workbook.active
 
     data = []
+    data = [('model','A1','A2','A3','A4','A5','A6','A7','A8','A9','E1','E2','E3','E4','C1','C2','C3','C4','C5','C6','review')]
     features = {'A':[0,0,0,0,0,0,0,0,0],'E':[0,0,0,0],'C':[0,0,0,0,0,0]}
     for i in range(100):
         a=random.randint(0,8)
@@ -34,7 +36,7 @@ for modelnumber in range(50):
 
 
     # loop through the data and write each row to the worksheet
-    for row_index, row_data in enumerate(data, start=2):
+    for row_index, row_data in enumerate(data, start=1):
         for i in range(21):
             worksheet.cell(row=row_index, column=i+1, value=row_data[i])
 
